@@ -3,7 +3,7 @@ package design.pattern.创建型模式CreationalPatterns.工厂模式FactoryPatt
 public class FactoryPatternDemo {
 
     public static void main(String[] args) {
-        ShapeFactory shapeFactory = new ShapeFactory();
+        ShapeFactory shapeFactory = ShapeFactory.newInstance();
 
         //获取 Circle 的对象，并调用它的 draw 方法
         Shape shape1 = shapeFactory.getShape("CIRCLE");

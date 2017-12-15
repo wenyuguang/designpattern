@@ -4,6 +4,6 @@ public class Blue implements Color {
 
     @Override
     public void fill() {
-        System.out.println("Inside Blue::fill() method.");
+        System.out.println("蓝色fill()方法");
     }
 }

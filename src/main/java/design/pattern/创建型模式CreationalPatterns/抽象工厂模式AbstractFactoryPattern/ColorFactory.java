@@ -7,6 +7,10 @@ public class ColorFactory extends AbstractFactory {
         return null;
     }
 
+    public ColorFactory(){
+        super();
+    }
+
     @Override
     Color getColor(String color) {
         if(color == null){

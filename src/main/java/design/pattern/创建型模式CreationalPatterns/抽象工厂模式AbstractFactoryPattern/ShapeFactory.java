@@ -2,6 +2,10 @@ package design.pattern.创建型模式CreationalPatterns.抽象工厂模式Abstr
 
 public class ShapeFactory extends AbstractFactory {
 
+    public ShapeFactory(){
+        super();
+    }
+
     @Override
     public Shape getShape(String shapeType){
         if(shapeType == null){

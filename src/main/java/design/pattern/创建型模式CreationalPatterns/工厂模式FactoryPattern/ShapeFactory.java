@@ -2,6 +2,18 @@ package design.pattern.创建型模式CreationalPatterns.工厂模式FactoryPatt
 
 public class ShapeFactory {
 
+    private static ShapeFactory shapeFactory;
+
+    public static ShapeFactory newInstance(){
+        synchronized (ShapeFactory.class){
+            if(shapeFactory == null){
+                shapeFactory = new ShapeFactory();
+            }
+        }
+
+        return shapeFactory;
+    }
+
     //使用 getShape 方法获取形状类型的对象
     public Shape getShape(String shapeType){
         if(shapeType == null){
@@ -18,7 +30,7 @@ public class ShapeFactory {
     }
 
     //使用反射机制可以解决每次增加一个产品时，都需要增加一个对象实现工厂的缺点
-    public static Object getClass(Class<?extends Shape> clazz) {
+    public static Object getClass(Class<? extends Shape> clazz) {
         Object obj = null;
 
         try {
