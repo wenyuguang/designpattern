@@ -3,11 +3,11 @@ package design.pattern.创建型模式CreationalPatterns.原型模式PrototypePa
 public class Circle extends Shape {
 
     public Circle(){
-        type = "Circle";
+        type = "圆";
     }
 
     @Override
     public void draw() {
-        System.out.println("Inside Circle::draw() method.");
+        System.out.println("圆draw()方法");
     }
 }

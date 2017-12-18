@@ -1,5 +1,8 @@
 package design.pattern.创建型模式CreationalPatterns.原型模式PrototypePattern;
 
+/**
+ * 形状抽象类
+ */
 public abstract class Shape implements Cloneable {
 
     protected String type;

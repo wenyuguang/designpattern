@@ -14,14 +14,14 @@ public class MVCPatternDemo {
         controller.updateView();
 
         //更新模型数据
-        controller.setStudentName("John");
+        controller.setStudentName("李四");
 
         controller.updateView();
     }
 
     private static Student retriveStudentFromDatabase() {
         Student student = new Student();
-        student.setName("Robert");
+        student.setName("张三");
         student.setRollNo("10");
         return student;
     }
