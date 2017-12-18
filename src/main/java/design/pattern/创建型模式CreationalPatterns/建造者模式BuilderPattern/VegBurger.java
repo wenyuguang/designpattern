@@ -1,5 +1,8 @@
 package design.pattern.创建型模式CreationalPatterns.建造者模式BuilderPattern;
 
+/**
+ * 蔬菜 汉堡
+ */
 public class VegBurger extends Burger {
 
     @Override
@@ -9,6 +12,6 @@ public class VegBurger extends Burger {
 
     @Override
     public String name() {
-        return "Veg Burger";
+        return "蔬菜汉堡";
     }
 }

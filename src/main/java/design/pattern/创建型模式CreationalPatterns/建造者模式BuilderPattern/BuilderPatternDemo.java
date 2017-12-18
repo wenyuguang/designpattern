@@ -2,16 +2,17 @@ package design.pattern.创建型模式CreationalPatterns.建造者模式BuilderP
 
 public class BuilderPatternDemo {
     public static void main(String[] args) {
-        MealBuilder mealBuilder = new MealBuilder();
+//        MealBuilder mealBuilder = new MealBuilder();
+        MealBuilder mealBuilder = MealBuilder.newInstance();
 
         Meal vegMeal = mealBuilder.prepareVegMeal();
-        System.out.println("Veg Meal");
+        System.out.println("蔬菜餐");
         vegMeal.showItems();
-        System.out.println("Total Cost: " +vegMeal.getCost());
+        System.out.println("总餐费: " +vegMeal.getCost());
 
         Meal nonVegMeal = mealBuilder.prepareNonVegMeal();
-        System.out.println("\n\nNon-Veg Meal");
+        System.out.println("\n非蔬菜餐");
         nonVegMeal.showItems();
-        System.out.println("Total Cost: " +nonVegMeal.getCost());
+        System.out.println("总餐费: " +nonVegMeal.getCost());
     }
 }
